@@ -14,7 +14,7 @@ namespace OutlookCalendar.Controllers
                 RestClient restClient = new RestClient();
                 RestRequest restRequest = new RestRequest();
 
-                restRequest.AddParameter("client_id", "53631b02-a068-450b-ae24-16145bf087e0");
+                restRequest.AddParameter("client_id", "MyClientID");
                 restRequest.AddParameter("scope", "Calendars.ReadWrite offline_access User.Read");
                 restRequest.AddParameter("redirect_uri", "https://localhost:44337/oauth/callback");
                 restRequest.AddParameter("code", code);
