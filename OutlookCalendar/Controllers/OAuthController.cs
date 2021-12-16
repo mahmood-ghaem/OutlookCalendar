@@ -22,7 +22,10 @@ namespace OutlookCalendar.Controllers
                 restRequest.AddParameter("client_secret", "MyClientSecret");
 
                 restClient.BaseUrl = new Uri("https://login.microsoftonline.com/common/oauth2/v2.0/token");
+                
                 var response = restClient.Post(restRequest);
+
+                response.ContentType = "application/x-www-form-urlencoded";
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
